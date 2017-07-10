@@ -34,18 +34,6 @@ Ext.define('Lemon.view.basic.CustomerController', {
         if (grid.store.getCount() > 0) {
             sm.select(0);
         }
-
-        /*
-                var grid = this.up("mypagesauth");
-                var sm = grid.getSelectionModel();
-                var selection = sm.getSelection()[0];
-                if (selection) {
-                    grid.store.remove(selection);
-                }
-                if (grid.store.getCount() > 0) {
-                    sm.select(0);
-                }
-                */
     },
 
     onSelectionChanged: function(view, selections, options) {

@@ -41,19 +41,6 @@ Ext.define('Lemon.view.basic.CustomerModel', {
             },
             listeners: {
                 write: 'onWrite'
-                // write: function(store, operation){
-                //     var record = operation.getRecords()[0],
-                //         name = Ext.String.capitalize(operation.action),
-                //         verb;
-
-                //     if (name == 'Destroy') {
-                //         record = operation._records[0];
-                //         verb = 'Destroyed';
-                //     } else {
-                //         verb = name + 'd';
-                //     }
-                //     Ext.toast({ html: Ext.String.format("{0} Auth: {1}", verb, record.getId()), cls: 'toast_success'});
-                // }
             }
         }
     }

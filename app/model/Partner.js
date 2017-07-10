@@ -1,10 +1,10 @@
-Ext.define('Lemon.model.Customer', {
+Ext.define('Lemon.model.Partner', {
     extend: 'Ext.data.Model',
     fields: [{
         name: 'uid',
         type: 'int',
         useNull: true
-    }, 'name', 'telephone', 'location', 'remark', 'createdAt', 'updatedAt'],
+    }, 'location', 'name', 'telephone', 'weixin', 'company', 'address', 'remark', 'createdAt', 'updatedAt'],
     validations: [{
         type: 'length',
         field: 'name',
@@ -19,3 +19,4 @@ Ext.define('Lemon.model.Customer', {
         min: 1
     }]
 });
+

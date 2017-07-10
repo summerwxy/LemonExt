@@ -49,6 +49,13 @@ Ext.define('Lemon.view.basic.Customer',{
             xtype: 'textfield'
         }
     }, {
+        text: '备注',
+        flex: 3,
+        dataIndex: 'remark',
+        field: {
+            xtype: 'textfield'
+        }
+    }, {
         text: 'Created',
         width: 150,
         dataIndex: 'createdAt'
@@ -67,6 +74,7 @@ Ext.define('Lemon.view.basic.Customer',{
             itemId: 'delete',
             text: '删除',
             disabled: true,
+            hidden: true,
             handler: 'onDeleteClicked'
         }]
     }],
