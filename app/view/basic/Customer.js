@@ -67,6 +67,7 @@ Ext.define('Lemon.view.basic.Customer',{
 
     dockedItems: [{
         xtype: 'toolbar',
+        cls: 'toolbar_cls',
         items: [{
             text: '新增',
             handler: 'onAddClicked'

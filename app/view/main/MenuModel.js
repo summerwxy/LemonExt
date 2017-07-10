@@ -16,7 +16,7 @@ Ext.define('Lemon.view.main.MenuModel', {
                     ]},
                     { text: '基本资料', leaf: false, expanded: true, children: [
                         { text: '合作伙伴', id: 'basic-partner', leaf: true },
-                        { text: '客户', id: 'basic-customer', leaf: true },
+                        // { text: '客户', id: 'basic-customer', leaf: true },
                     ]},
                 ]
             }

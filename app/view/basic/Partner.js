@@ -91,6 +91,7 @@ Ext.define('Lemon.view.basic.Partner',{
   
     dockedItems: [{
         xtype: 'toolbar',
+        cls: 'toolbar_cls',
         items: [{
             text: '新增',
             handler: 'onAddClicked'
@@ -98,7 +99,7 @@ Ext.define('Lemon.view.basic.Partner',{
             itemId: 'delete',
             text: '删除',
             disabled: true,
-            // hidden: true,
+            hidden: true,
             handler: 'onDeleteClicked'
         }]
     }],
