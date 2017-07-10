@@ -8,7 +8,6 @@ resources/sass/.sass-cache/
 # Library
 touch/
 
-.sencha
 .architect
 bootstrap.css
 bootstrap.js
