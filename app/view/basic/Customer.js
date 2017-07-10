@@ -24,7 +24,7 @@ Ext.define('Lemon.view.basic.Customer',{
         ptype: 'rowEditing',
     }],
     columns: [{
-        text: 'ID',
+        text: '#',
         width: 55,
         dataIndex: 'uid'
     }, {
@@ -51,25 +51,26 @@ Ext.define('Lemon.view.basic.Customer',{
     }, {
         text: 'Created',
         width: 150,
-        dataIndex: 'date_created'
+        dataIndex: 'createdAt'
     }, {
         text: 'Updated',
         width: 150,
-        dataIndex: 'last_updated'
+        dataIndex: 'updatedAt'
     }],
 
     dockedItems: [{
         xtype: 'toolbar',
         items: [{
-            text: 'Add',
+            text: '新增',
             handler: 'onAddClicked'
         }, {
             itemId: 'delete',
-            text: 'Delete',
+            text: '删除',
             disabled: true,
             handler: 'onDeleteClicked'
         }]
     }],
+
 
     listeners: {
         'selectionchange': 'onSelectionChanged'

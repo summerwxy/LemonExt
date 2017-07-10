@@ -17,18 +17,25 @@ Ext.define('Lemon.view.basic.CustomerController', {
     },
 
     onAddClicked: function(btn, evt) {
-        console.log('ADD 2');
         var rec = new Lemon.model.Customer();
         var panel = btn.up('pages-basic-customer');
         panel.store.insert(0, rec);
         var re = panel.findPlugin('rowEditing');
         re.startEdit(0, 0);
-
     },
 
-    onDeleteClicked: function() {
-        console.log('DELETE 2');
-                /*
+    onDeleteClicked: function(btn, evt) {
+        var grid = btn.up('pages-basic-customer');
+        var sm = grid.getSelectionModel();
+        var selection = sm.getSelection()[0];
+        if (selection) {
+            grid.store.remove(selection);
+        }
+        if (grid.store.getCount() > 0) {
+            sm.select(0);
+        }
+
+        /*
                 var grid = this.up("mypagesauth");
                 var sm = grid.getSelectionModel();
                 var selection = sm.getSelection()[0];
@@ -41,9 +48,9 @@ Ext.define('Lemon.view.basic.CustomerController', {
                 */
     },
 
-    onSelectionChanged: function(selModel, selections) {
-        console.log('selectionchange');
+    onSelectionChanged: function(view, selections, options) {
         // TODO: 剛剛新增 但是還沒刷新的紀錄 不給刪除功能的
-        // this.down('#delete').setDisabled(selections.length === 0);
+        var grid = view.view.ownerGrid;
+        grid.down('#delete').setDisabled(selections.length === 0);
     },
 });

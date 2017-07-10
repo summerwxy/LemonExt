@@ -1,3 +1,17 @@
+## LemonExt
+
+
+
+### clone and setting dev env
+
+git clone git@github.com:summerwxy/LemonExt.git
+cd LemonExt
+sencha app upgrade ..\..\ext-6.2.0
+sencha app watch
+
+
+
+
 # Lemon
 
 This folder is primarily a container for the top-level pieces of the application.
