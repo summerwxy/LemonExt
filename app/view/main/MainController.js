@@ -33,15 +33,9 @@ Ext.define('Lemon.view.main.MainController', {
     },
 
     onBeforeHome: function(action) {
-        console.log('check is signin...');
-        var foo = Ext.util.Cookies.get('connect.sid');
-        console.log(foo);
-
-
         var that = this;
-        var req = Ext.Ajax.request({
+        Ext.Ajax.request({
             url: Lemon.utils.getApiUrl('isSignin'),
-            // withCredentials: true,
             success: function(res) {
                 var json = Ext.JSON.decode(res.responseText);
                 if (json.status == 0) {
@@ -54,7 +48,6 @@ Ext.define('Lemon.view.main.MainController', {
                 action.stop(true);
             }
         });
-        console.log(req.xhr)
     },
 
     onHome: function() {
