@@ -11,8 +11,8 @@ Ext.define('Lemon.view.basic.PartnerModel', {
             model: 'Lemon.model.Partner',
             proxy: {
                 type: 'rest',
-                // headers: { 'Content-Type': 'text/plain; charset=UTF-8' }, // 加上這行 就符合 simple request, 就不會用 OPTIONS 訪問了
                 useDefaultXhrHeader: false, // <= HERE
+                withCredentials: true,
                 url: Lemon.utils.getApiUrl('partner'),
                 reader: {
                     type: 'json',

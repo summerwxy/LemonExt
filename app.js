@@ -17,7 +17,7 @@ Ext.application({
     // will gain a "viewport" plugin if it does not extend Ext.Viewport. With the
     // modern toolkit, the main view will be added to the Viewport.
     //
-    mainView: 'Lemon.view.main.Home'
+    mainView: 'Lemon.view.main.Main'
 
     //-------------------------------------------------------------------------
     // Most customizations should be made to Lemon.Application. If you need to

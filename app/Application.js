@@ -7,6 +7,7 @@ Ext.define('Lemon.Application', {
     extend: 'Ext.app.Application',
 
     name: 'Lemon',
+    defaultToken: 'home',
 
     stores: [
         // TODO: add global / shared stores here
@@ -14,18 +15,26 @@ Ext.define('Lemon.Application', {
 
     launch: function () {
         // TODO - Launch the application
-
+        var that = this;
         // Ajax Response Error Handler
         Ext.Ajax.on('requestexception', function(conn, response, options, eOpts) {
             var error = response.status + ' - ' + response.statusText;
             console.log('Ajax Request Exception! ' + error);
-            if (response.status != 200) {
+            if (response.status == 200) {
+                // pass
+            } else if (response.status == 401) {
+                that.redirectTo('signin');
+            } else {
                 var errorData = Ext.JSON.decode(response.responseText);
                 console.log('message >> ' + errorData.message);
                 // Ext.Error.raise(error);
                 Ext.toast({ html: Ext.String.format("出错了！ {0}", errorData.message), cls: 'toast_danger'});
             }
-            // TODO: 抓沒有登入的情況
+        });
+
+        Ext.Ajax.on("beforerequest", function(conn){
+            conn.setUseDefaultXhrHeader(false);
+            conn.setWithCredentials(true);
         });
     },
 
@@ -39,3 +48,5 @@ Ext.define('Lemon.Application', {
         );
     }
 });
+
+
