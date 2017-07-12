@@ -2,25 +2,26 @@ Ext.define('Lemon.view.basic.PartnerController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.basic-partner',
 
+    // requires: [
+    //     'Lemon.model.Partner',
+    // ],
 
-   onWrite: function(store, operation) {
+    onWrite: function(store, operation) {
         var record = operation.getRecords()[0],
             name = Ext.String.capitalize(operation.action),
             verb;
-
-        if (name == 'Destroy') {
-            record = operation._records[0];
-            verb = 'Destroyed';
-        } else {
-            verb = name + 'd';
-        }
-        Ext.toast({ html: Ext.String.format("{0} Data: {1}", verb, record.getId()), cls: 'toast_success'});
+        if (name == 'Create') { verb = '新增'; } 
+        else if (name == 'Update') { verb = '更新'; } 
+        else if (name == 'Destroy') { record = operation._records[0]; verb = '删除'; } 
+        else { verb = name; }
+        Ext.toast({ html: Ext.String.format("{0} 资料: {1}", verb, record.data.uid), cls: 'toast_success'});
     },
 
     onAddClicked: function(btn, evt) {
         var rec = new Lemon.model.Partner();
         var panel = btn.up('pages-basic-partner');
         panel.store.insert(0, rec);
+        // panel.store.insert(0, {});
         var re = panel.findPlugin('rowEditing');
         re.startEdit(0, 0);
     },

@@ -1,7 +1,6 @@
-Ext.define('Lemon.view.main.HomeModel', {
+Ext.define('Lemon.view.test.IndexModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.main-home',
-
+    alias: 'viewmodel.test-index',
     data: {
         name: 'Lemon'
     }

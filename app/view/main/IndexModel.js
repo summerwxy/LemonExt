@@ -3,6 +3,7 @@ Ext.define('Lemon.view.main.IndexModel', {
     alias: 'viewmodel.main-index',
     data: {
         name: 'Lemon'
-    }
+    },
+
 
 });

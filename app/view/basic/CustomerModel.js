@@ -26,8 +26,8 @@ Ext.define('Lemon.view.basic.CustomerModel', {
             autoSync: true,
             model: 'Lemon.model.Customer',
             proxy: {
-                type: 'rest',
-                useDefaultXhrHeader: false,
+                type: 'ajax',
+                // useDefaultXhrHeader: false,
                 withCredentials: true,
                 url: Lemon.utils.getApiUrl('customer'),
                 reader: {

@@ -99,7 +99,7 @@ Ext.define('Lemon.view.basic.Partner',{
             itemId: 'delete',
             text: '删除',
             disabled: true,
-            hidden: true,
+            // hidden: true,
             handler: 'onDeleteClicked'
         }]
     }],

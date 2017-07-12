@@ -5,6 +5,7 @@ Ext.define('Lemon.model.Customer', {
         type: 'int',
         useNull: true
     }, 'name', 'telephone', 'location', 'remark', 'createdAt', 'updatedAt'],
+    /*
     validators: [{
         type: 'length',
         field: 'name',
@@ -18,4 +19,5 @@ Ext.define('Lemon.model.Customer', {
         field: 'location',
         min: 1
     }]
+    */
 });

@@ -5,13 +5,18 @@ Ext.define('Lemon.view.basic.PartnerModel', {
         name: 'Lemon'
     },
 
+    requires: [
+        'Lemon.model.Partner',
+    ],
+
     stores: {
         data: {
+            
             autoSync: true,
             model: 'Lemon.model.Partner',
             proxy: {
                 type: 'rest',
-                useDefaultXhrHeader: false, // <= HERE
+                // useDefaultXhrHeader: false,
                 withCredentials: true,
                 url: Lemon.utils.getApiUrl('partner'),
                 reader: {

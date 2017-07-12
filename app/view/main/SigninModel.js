@@ -3,6 +3,7 @@ Ext.define('Lemon.view.main.SigninModel', {
     alias: 'viewmodel.main-signin',
     data: {
         name: 'Lemon'
-    }
+    },
+
 
 });

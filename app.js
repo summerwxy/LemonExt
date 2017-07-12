@@ -9,7 +9,10 @@ Ext.application({
     extend: 'Lemon.Application',
 
     requires: [
-        // 'Lemon.view.main.Main',
+        'Lemon.view.main.Main', // generated
+        // Ext classes
+        'Ext.window.Toast', 
+        'Ext.data.proxy.Rest',
         'Lemon.view.main.Index',
     ],
 

@@ -5,7 +5,7 @@ Ext.define('Lemon.view.main.Menu',{
 
     requires: [
         'Lemon.view.main.MenuController',
-        'Lemon.view.main.MenuModel'
+        'Lemon.view.main.MenuModel',
     ],
 
     controller: 'main-menu',

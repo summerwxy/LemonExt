@@ -4,7 +4,7 @@ Ext.define('Lemon.view.main.Signin',{
 
     requires: [
         'Lemon.view.main.SigninController',
-        'Lemon.view.main.SigninModel'
+        'Lemon.view.main.SigninModel',
     ],
 
     controller: 'main-signin',

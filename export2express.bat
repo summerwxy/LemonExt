@@ -1,0 +1,1 @@
+sencha app build -des ..\Express\Lemon testing

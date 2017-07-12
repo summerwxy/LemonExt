@@ -6,7 +6,7 @@ Ext.define('Lemon.view.main.Index',{
 
     requires: [
         'Lemon.view.main.IndexController',
-        'Lemon.view.main.IndexModel'
+        'Lemon.view.main.IndexModel',
     ],
 
     controller: 'main-index',
@@ -15,9 +15,11 @@ Ext.define('Lemon.view.main.Index',{
     },
 
     layout: 'fit',
+    items: [{
+        xtype: 'panel',
+        html: 'Loading...'
+    }],
 
-    items: [],
-
-    // html: 'main-main'
+    
 
 });

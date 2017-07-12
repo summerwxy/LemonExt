@@ -551,5 +551,10 @@
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "c2ddafa1-b10c-40f4-a45c-575d63af384f"
+    "id": "c2ddafa1-b10c-40f4-a45c-575d63af384f",
+
+    /**
+     * add by 0_o
+     */
+     "env": "${build.environment}"
 }
