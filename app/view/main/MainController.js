@@ -20,11 +20,11 @@ Ext.define('Lemon.view.main.MainController', {
     },
 
     routes: {
-        'signin': 'onSignin',
-        'home': {
-            before: 'onBeforeHome',
-            action: 'onHome',
-        }
+        // 'signin': 'onSignin',
+        // 'home': {
+        //     before: 'onBeforeHome',
+        //     action: 'onHome',
+        // }
     },
 
     onSignin: function() {

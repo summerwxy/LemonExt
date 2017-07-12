@@ -18,5 +18,5 @@ Ext.define('Lemon.view.main.Main',{
 
     items: [],
 
-    // html: '1234'
+    html: '1234'
 });
