@@ -13,6 +13,8 @@ Ext.application({
         // Ext classes
         'Ext.window.Toast', 
         'Ext.data.proxy.Rest',
+        'Ext.data.validator.Length',
+        
         'Lemon.view.main.Index',
     ],
 
