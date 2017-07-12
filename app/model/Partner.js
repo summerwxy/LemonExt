@@ -5,7 +5,7 @@ Ext.define('Lemon.model.Partner', {
         type: 'int',
         useNull: true
     }, 'location', 'name', 'telephone', 'weixin', 'company', 'address', 'remark', 'createdAt', 'updatedAt'],
-    validations: [{
+    validators: [{
         type: 'length',
         field: 'name',
         min: 1
