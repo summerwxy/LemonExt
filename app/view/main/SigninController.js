@@ -11,6 +11,7 @@ Ext.define('Lemon.view.main.SigninController', {
             // waitTitle: 'Connecting',
             // waitMsg: 'Sending data...',                  
             jsonData: true,
+            // TODO: send ooss...
             params: {
                 'user': 'wxy',
                 'password': '111'
