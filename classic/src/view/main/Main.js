@@ -5,7 +5,7 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('Lemon.view.main.Main.x', {
+Ext.define('Lemon.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 

@@ -4,7 +4,7 @@ Ext.define('Lemon.utils', {
         return 'FOO';
     },
 
-    isDev: true,
+    isDev: false,
 
     getApiUrl: function(path) {
         return this.isDev ? 'http://localhost:5000/api/' + path : '/api/' + path;
